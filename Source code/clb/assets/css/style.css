@@ -1,0 +1,309 @@
+/* =====================================================================
+   Giao diện CLB ICT – màu lấy từ logo: cam #EC690C, xanh dương #0003EF
+   ===================================================================== */
+:root {
+    --brand-orange: #EC690C;
+    --brand-orange-dark: #B84C02;
+    --brand-orange-soft: #FDEBDD;
+    --brand-blue: #0003EF;
+    --brand-blue-dark: #0A0C8C;
+    --brand-navy: #070A4D;
+    --brand-blue-soft: #E8E9FF;
+
+    /* Ghi đè màu mặc định của Bootstrap */
+    --bs-primary: #D65A05;
+    --bs-primary-rgb: 214, 90, 5;
+    --bs-link-color: #0003EF;
+    --bs-link-color-rgb: 0, 3, 239;
+    --bs-link-hover-color: #0A0C8C;
+    --bs-link-hover-color-rgb: 10, 12, 140;
+}
+
+body { background-color: #F5F6FB; color: #1d1f3a; }
+h1, h2, h3, h4, h5, h6 { color: var(--brand-navy); }
+
+/* ---------- Nút ---------- */
+.btn-primary {
+    --bs-btn-bg: #D65A05;
+    --bs-btn-border-color: #D65A05;
+    --bs-btn-hover-bg: #B84C02;
+    --bs-btn-hover-border-color: #B84C02;
+    --bs-btn-active-bg: #A64402;
+    --bs-btn-active-border-color: #A64402;
+    --bs-btn-disabled-bg: #D65A05;
+    --bs-btn-disabled-border-color: #D65A05;
+    --bs-btn-focus-shadow-rgb: 214, 90, 5;
+    font-weight: 600;
+}
+.btn-outline-brand {
+    --bs-btn-color: #0003EF;
+    --bs-btn-border-color: #0003EF;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #0003EF;
+    --bs-btn-hover-border-color: #0003EF;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0A0C8C;
+    --bs-btn-active-border-color: #0A0C8C;
+    --bs-btn-focus-shadow-rgb: 0, 3, 239;
+    font-weight: 600;
+}
+.btn-light-outline {
+    --bs-btn-color: #fff;
+    --bs-btn-border-color: rgba(255, 255, 255, .7);
+    --bs-btn-hover-color: var(--brand-navy);
+    --bs-btn-hover-bg: #fff;
+    --bs-btn-hover-border-color: #fff;
+    font-weight: 600;
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--brand-blue);
+    box-shadow: 0 0 0 .2rem rgba(0, 3, 239, .15);
+}
+
+/* ---------- Thanh điều hướng ---------- */
+.site-nav {
+    border-bottom: 3px solid var(--brand-orange);
+    box-shadow: 0 2px 10px rgba(7, 10, 77, .08);
+}
+.brand-logo { height: 46px; width: auto; object-fit: contain; }
+.brand-name {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: .5px;
+    color: var(--brand-blue);
+}
+.brand-tag {
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--brand-orange-dark);
+    margin-top: 3px;
+}
+.site-nav .nav-link { font-weight: 500; color: #33365e; }
+.site-nav .nav-link:hover { color: var(--brand-blue); }
+.site-nav .nav-link.active {
+    color: var(--brand-blue);
+    font-weight: 700;
+    box-shadow: inset 0 -3px 0 var(--brand-orange);
+}
+.user-avatar {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: var(--brand-blue);
+    color: #fff;
+    font-weight: 700;
+    display: inline-flex; align-items: center; justify-content: center;
+}
+
+/* ---------- Khối giới thiệu (trang chủ) ---------- */
+.hero {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, var(--brand-navy) 0%, var(--brand-blue-dark) 55%, #1a1fd6 100%);
+}
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+.hero::before { width: 300px; height: 300px; right: -90px; top: -110px; border: 38px solid rgba(236, 105, 12, .40); }
+.hero::after  { width: 170px; height: 170px; left: -60px; bottom: -80px; border: 26px solid rgba(255, 255, 255, .08); }
+.hero > * { position: relative; z-index: 1; }
+.hero h1 { color: #fff; font-weight: 800; }
+.hero .accent { color: #FFA463; }
+.hero-pill {
+    display: inline-block;
+    padding: .25rem .8rem;
+    border-radius: 999px;
+    background: var(--brand-orange);
+    color: #fff;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+.hero-logo-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+    display: inline-block;
+}
+.hero-logo { width: 190px; max-width: 100%; height: auto; display: block; }
+
+/* ---------- Ô số liệu ---------- */
+.stat-chip {
+    background: #fff;
+    border-radius: .8rem;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 1px 4px rgba(7, 10, 77, .08);
+    border-left: 5px solid var(--brand-orange);
+    height: 100%;
+}
+.stat-chip.blue { border-left-color: var(--brand-blue); }
+.stat-chip .num { font-size: 1.9rem; font-weight: 800; line-height: 1.1; color: var(--brand-blue); }
+.stat-chip.orange .num { color: var(--brand-orange-dark); }
+.stat-chip .lbl { color: #5b5e80; font-size: .85rem; }
+
+/* ---------- Tiêu đề mục ---------- */
+.section-title {
+    font-weight: 800;
+    position: relative;
+    padding-bottom: .5rem;
+    margin-bottom: 1.25rem;
+}
+.section-title::after {
+    content: "";
+    position: absolute; left: 0; bottom: 0;
+    width: 56px; height: 4px; border-radius: 4px;
+    background: linear-gradient(90deg, var(--brand-orange), var(--brand-blue));
+}
+
+/* ---------- Thẻ sự kiện ---------- */
+.card { border: 0; border-radius: .8rem; box-shadow: 0 1px 4px rgba(7, 10, 77, .08); }
+.event-card {
+    border-top: 4px solid var(--brand-orange);
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+.event-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(7, 10, 77, .14); }
+.date-block {
+    background: var(--brand-blue);
+    color: #fff;
+    border-radius: .6rem;
+    min-width: 58px;
+    padding: .5rem .5rem;
+    text-align: center;
+    line-height: 1.1;
+    align-self: flex-start;
+}
+.date-block .day { font-size: 1.5rem; font-weight: 800; }
+.date-block .mon { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; opacity: .9; }
+.badge-cat { background: var(--brand-orange-soft); color: var(--brand-orange-dark); font-weight: 600; }
+.badge-seat-ok   { background: #E3F6EA; color: #146c43; font-weight: 600; }
+.badge-seat-low  { background: #FFF1D6; color: #8a5a00; font-weight: 600; }
+.badge-seat-full { background: #FBE3E3; color: #a61e1e; font-weight: 600; }
+
+/* ---------- Quy trình tham gia ---------- */
+.step-card { text-align: center; padding: 1.25rem; height: 100%; }
+.step-no {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--brand-orange); color: #fff;
+    font-weight: 800; font-size: 1.15rem;
+    display: inline-flex; align-items: center; justify-content: center;
+    margin-bottom: .6rem;
+}
+
+/* ---------- Trang đăng nhập / đăng ký ---------- */
+.auth-logo { height: 110px; width: auto; }
+.auth-card, .auth-card-wide { border-top: 4px solid var(--brand-orange); }
+.auth-card { max-width: 460px; margin: 0 auto; }
+.auth-card-wide { max-width: 640px; margin: 0 auto; }
+
+/* ---------- Khu vực quản trị ---------- */
+.page-head {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: .5rem;
+    padding: 1rem 1.25rem; margin-bottom: 1.25rem;
+    background: #fff; border-radius: .8rem;
+    border-left: 6px solid var(--brand-orange);
+    box-shadow: 0 1px 4px rgba(7, 10, 77, .08);
+}
+.page-head h1 { margin: 0; font-weight: 800; }
+.stat-card { border-left: 5px solid var(--brand-orange); }
+.stat-card.blue { border-left-color: var(--brand-blue); }
+.stat-number { font-size: 2rem; font-weight: 800; line-height: 1.1; color: var(--brand-blue); }
+.stat-card.orange .stat-number { color: var(--brand-orange-dark); }
+
+/* ---------- Chân trang ---------- */
+.site-footer {
+    background: var(--brand-navy);
+    border-top: 4px solid var(--brand-orange);
+    color: #cfd2ff;
+}
+.footer-logo-wrap { background: #fff; border-radius: .6rem; padding: .35rem .5rem; display: inline-block; }
+.footer-logo { height: 52px; width: auto; display: block; }
+.footer-tag { color: #FFA463; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; }
+.footer-muted { color: #aeb3f0; }
+
+/* =====================================================================
+   Giai đoạn 2: khu vực quản trị (bảng, bộ lọc, trạng thái, phân trang)
+   ===================================================================== */
+.admin-tabs .nav-link { color: var(--brand-navy); font-weight: 600; background: #fff; margin-right: .4rem; box-shadow: 0 1px 3px rgba(7, 10, 77, .08); }
+.admin-tabs .nav-link:hover { color: var(--brand-blue); }
+.admin-tabs .nav-link.active { background: var(--brand-blue); color: #fff; }
+
+.table-brand { background: #fff; border-radius: .8rem; overflow: hidden; margin-bottom: 0; }
+.table-brand thead th { background: var(--brand-navy); color: #fff; font-weight: 600; font-size: .85rem; border: 0; white-space: nowrap; }
+.table-brand tbody td { vertical-align: middle; }
+.table-brand tbody tr:hover { background: #FAFAFF; }
+
+.filter-bar { background: #fff; border-radius: .8rem; padding: 1rem; box-shadow: 0 1px 4px rgba(7, 10, 77, .08); }
+
+.badge-st-open      { background: #E3F6EA; color: #146c43; font-weight: 600; }
+.badge-st-closed    { background: #FFF1D6; color: #8a5a00; font-weight: 600; }
+.badge-st-finished  { background: #E9EAF3; color: #4a4d73; font-weight: 600; }
+.badge-st-cancelled { background: #FBE3E3; color: #a61e1e; font-weight: 600; }
+
+.progress { height: 6px; background: #E9EAF3; }
+.progress-bar { background: var(--brand-orange); }
+
+.pagination {
+    --bs-pagination-color: #0003EF;
+    --bs-pagination-hover-color: #0A0C8C;
+    --bs-pagination-active-bg: #D65A05;
+    --bs-pagination-active-border-color: #D65A05;
+    --bs-pagination-focus-box-shadow: 0 0 0 .2rem rgba(214, 90, 5, .2);
+}
+.form-section-title { font-weight: 700; color: var(--brand-navy); border-left: 4px solid var(--brand-orange); padding-left: .6rem; margin-bottom: 1rem; }
+
+/* =====================================================================
+   Giai đoạn 3: quản lý thành viên
+   ===================================================================== */
+.badge-us-pending  { background: #FFF1D6; color: #8a5a00; font-weight: 600; }
+.badge-us-active   { background: #E3F6EA; color: #146c43; font-weight: 600; }
+.badge-us-inactive { background: #E9EAF3; color: #4a4d73; font-weight: 600; }
+.badge-us-rejected { background: #FBE3E3; color: #a61e1e; font-weight: 600; }
+
+.badge-att-present { background: #E3F6EA; color: #146c43; font-weight: 600; }
+.badge-att-absent  { background: #FBE3E3; color: #a61e1e; font-weight: 600; }
+.badge-att-none    { background: #E9EAF3; color: #4a4d73; font-weight: 600; }
+
+.status-pill {
+    display: inline-block; padding: .3rem .85rem; border-radius: 999px;
+    background: #fff; border: 1px solid #dfe1f0; color: var(--brand-navy);
+    font-size: .85rem; font-weight: 600; text-decoration: none;
+}
+.status-pill:hover { border-color: var(--brand-blue); color: var(--brand-blue); }
+.status-pill.active { background: var(--brand-blue); border-color: var(--brand-blue); color: #fff; }
+
+.profile-avatar {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: var(--brand-blue); color: #fff; font-size: 1.9rem; font-weight: 800;
+    display: inline-flex; align-items: center; justify-content: center;
+}
+
+/* =====================================================================
+   Giai đoạn 4: phía thành viên (chi tiết sự kiện, đăng ký, hồ sơ)
+   ===================================================================== */
+.badge-mine { background: var(--brand-blue-soft); color: var(--brand-blue-dark); font-weight: 600; }
+
+.event-banner {
+    color: #fff;
+    border-radius: 1rem;
+    padding: 1.75rem;
+    background: linear-gradient(135deg, var(--brand-navy) 0%, var(--brand-blue-dark) 60%, #1a1fd6 100%);
+    border-bottom: 5px solid var(--brand-orange);
+}
+.event-banner h1 { color: #fff; font-weight: 800; }
+
+.detail-list dt { color: #5b5e80; font-weight: 600; }
+.detail-list dd { margin-bottom: .6rem; }
+
+.reg-panel { border-top: 4px solid var(--brand-blue); position: sticky; top: 90px; }
+
+.breadcrumb { --bs-breadcrumb-divider-color: #8b8fb5; }
